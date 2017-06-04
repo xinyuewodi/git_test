@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/picture">
+        <file>pic/swim.png</file>
+        <file>pic/add.png</file>
+    </qresource>
+</RCC>
