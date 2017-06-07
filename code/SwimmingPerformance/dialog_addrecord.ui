@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>添加记录</string>
+   <string>Add records</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
@@ -21,7 +21,7 @@
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
-      <string>基本数据</string>
+      <string>Basic Data</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
@@ -29,14 +29,14 @@
         <item row="4" column="0">
          <widget class="QLabel" name="label_5">
           <property name="text">
-           <string>最慢圈（S）</string>
+           <string>Slowest Loop</string>
           </property>
          </widget>
         </item>
         <item row="4" column="2">
          <widget class="QLabel" name="label_7">
           <property name="text">
-           <string>耗时</string>
+           <string>Time Cost(S)</string>
           </property>
          </widget>
         </item>
@@ -49,14 +49,14 @@
         <item row="3" column="0">
          <widget class="QLabel" name="label_4">
           <property name="text">
-           <string>最快圈（L）</string>
+           <string>Fastest Loop</string>
           </property>
          </widget>
         </item>
         <item row="0" column="0">
          <widget class="QLabel" name="label">
           <property name="text">
-           <string>总圈数</string>
+           <string>Total Loops</string>
           </property>
          </widget>
         </item>
@@ -69,7 +69,7 @@
         <item row="2" column="0">
          <widget class="QLabel" name="label_3">
           <property name="text">
-           <string>平均每圈耗时（AVG）</string>
+           <string>AVG Time</string>
           </property>
          </widget>
         </item>
@@ -82,14 +82,14 @@
         <item row="1" column="0">
          <widget class="QLabel" name="label_2">
           <property name="text">
-           <string>总时间</string>
+           <string>Total Time</string>
           </property>
          </widget>
         </item>
         <item row="3" column="2">
          <widget class="QLabel" name="label_6">
           <property name="text">
-           <string>耗时</string>
+           <string>Time Cost(F)</string>
           </property>
          </widget>
         </item>
@@ -99,7 +99,7 @@
         <item row="0" column="2">
          <widget class="QPushButton" name="pushButton">
           <property name="text">
-           <string>确定</string>
+           <string>Fresh Detail Data Table</string>
           </property>
          </widget>
         </item>
@@ -111,7 +111,7 @@
    <item>
     <widget class="QGroupBox" name="groupBox_2">
      <property name="title">
-      <string>详细数据</string>
+      <string>Detail Data</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
@@ -133,12 +133,12 @@
         </attribute>
         <column>
          <property name="text">
-          <string>圈数</string>
+          <string>LoopNumber</string>
          </property>
         </column>
         <column>
          <property name="text">
-          <string>用时</string>
+          <string>TimeCost</string>
          </property>
         </column>
        </widget>
@@ -151,14 +151,14 @@
      <item>
       <widget class="QPushButton" name="pushButton_2">
        <property name="text">
-        <string>确认添加</string>
+        <string>Confirm</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_3">
        <property name="text">
-        <string>关闭</string>
+        <string>CLose</string>
        </property>
       </widget>
      </item>

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>游泳数据记录</string>
+   <string>Swimming Performance</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
@@ -28,7 +28,7 @@
     <item>
      <widget class="QGroupBox" name="groupBox_2">
       <property name="title">
-       <string>操作</string>
+       <string>Operations</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
@@ -36,7 +36,7 @@
          <item>
           <widget class="QPushButton" name="pushButton_addRecord">
            <property name="text">
-            <string>添加记录</string>
+            <string>Add Record</string>
            </property>
           </widget>
          </item>
@@ -46,14 +46,14 @@
             <bool>false</bool>
            </property>
            <property name="text">
-            <string>导出记录</string>
+            <string>Outport Record</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QPushButton" name="pushButton_close">
            <property name="text">
-            <string>关闭</string>
+            <string>Close</string>
            </property>
           </widget>
          </item>
@@ -78,7 +78,7 @@
     <item>
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
-       <string>统计数据</string>
+       <string>Statistical Data</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
@@ -86,14 +86,14 @@
          <item row="0" column="0">
           <widget class="QLabel" name="label_2">
            <property name="text">
-            <string>第一次记录</string>
+            <string>First Record Date</string>
            </property>
           </widget>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_3">
            <property name="text">
-            <string>最后一次记录</string>
+            <string>Last Record Date</string>
            </property>
           </widget>
          </item>
@@ -123,7 +123,7 @@
          <item row="2" column="0">
           <widget class="QLabel" name="label">
            <property name="text">
-            <string>最快圈用时</string>
+            <string>Time Cost of Fastest Loop</string>
            </property>
           </widget>
          </item>
@@ -138,7 +138,7 @@
     <item>
      <widget class="QGroupBox" name="groupBox_3">
       <property name="title">
-       <string>最近10圈记录</string>
+       <string>Recent 10 Average Time Cost</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
@@ -158,6 +158,14 @@
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuLanguage">
+    <property name="title">
+     <string>Language</string>
+    </property>
+    <addaction name="actionChinese"/>
+    <addaction name="actionEnglish"/>
+   </widget>
+   <addaction name="menuLanguage"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -168,6 +176,25 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionChinese">
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Chinese</string>
+   </property>
+   <property name="autoRepeat">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="text">
+    <string>English</string>
+   </property>
+   <property name="autoRepeat">
+    <bool>true</bool>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>

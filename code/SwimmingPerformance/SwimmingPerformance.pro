@@ -26,11 +26,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    dialog_addrecord.cpp
+    dialog_addrecord.cpp \
+    databasemanager.cpp
 
 HEADERS += \
         mainwindow.h \
-    dialog_addrecord.h
+    dialog_addrecord.h \
+    databasemanager.h
 
 FORMS += \
         mainwindow.ui \
@@ -40,3 +42,5 @@ RESOURCES += \
     resources.qrc
 
 DISTFILES +=
+
+TRANSLATIONS = swimmingperformance_en.ts swimmingperformance_cn.ts
