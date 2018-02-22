@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>428</width>
-    <height>466</height>
+    <width>722</width>
+    <height>585</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,85 +21,101 @@
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
-      <string>Basic Data</string>
+      <string/>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <layout class="QGridLayout" name="gridLayout">
-        <item row="4" column="0">
-         <widget class="QLabel" name="label_5">
-          <property name="text">
-           <string>Slowest Loop</string>
+        <item row="3" column="3">
+         <widget class="QTimeEdit" name="timeEdit_3">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
           </property>
          </widget>
         </item>
-        <item row="4" column="2">
-         <widget class="QLabel" name="label_7">
-          <property name="text">
-           <string>Time Cost(S)</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="1">
-         <widget class="QLineEdit" name="lineEdit_5"/>
-        </item>
-        <item row="4" column="3">
-         <widget class="QTimeEdit" name="timeEdit_4"/>
-        </item>
-        <item row="3" column="0">
-         <widget class="QLabel" name="label_4">
-          <property name="text">
-           <string>Fastest Loop</string>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
           </property>
          </widget>
         </item>
         <item row="0" column="0">
          <widget class="QLabel" name="label">
           <property name="text">
-           <string>Total Loops</string>
+           <string>总圈数*</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="lineEdit"/>
-        </item>
-        <item row="3" column="3">
-         <widget class="QTimeEdit" name="timeEdit_3"/>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_3">
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_4">
           <property name="text">
-           <string>AVG Time</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QTimeEdit" name="timeEdit_2"/>
-        </item>
-        <item row="1" column="1">
-         <widget class="QTimeEdit" name="timeEdit"/>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_2">
-          <property name="text">
-           <string>Total Time</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="2">
-         <widget class="QLabel" name="label_6">
-          <property name="text">
-           <string>Time Cost(F)</string>
+           <string>最快圈</string>
           </property>
          </widget>
         </item>
         <item row="3" column="1">
          <widget class="QLineEdit" name="lineEdit_4"/>
         </item>
-        <item row="0" column="2">
-         <widget class="QPushButton" name="pushButton">
+        <item row="3" column="2">
+         <widget class="QLabel" name="label_6">
           <property name="text">
-           <string>Fresh Detail Data Table</string>
+           <string>耗时</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>最慢圈</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="5">
+         <widget class="QLineEdit" name="lineEdit_5"/>
+        </item>
+        <item row="3" column="6">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>耗时</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="7">
+         <widget class="QTimeEdit" name="timeEdit_4">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>总时间*</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QTimeEdit" name="timeEdit">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>平均时间</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QTimeEdit" name="timeEdit_2">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
           </property>
          </widget>
         </item>
@@ -111,7 +127,7 @@
    <item>
     <widget class="QGroupBox" name="groupBox_2">
      <property name="title">
-      <string>Detail Data</string>
+      <string>数据</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
@@ -133,12 +149,12 @@
         </attribute>
         <column>
          <property name="text">
-          <string>LoopNumber</string>
+          <string>圈号</string>
          </property>
         </column>
         <column>
          <property name="text">
-          <string>TimeCost</string>
+          <string>耗时</string>
          </property>
         </column>
        </widget>
@@ -151,14 +167,14 @@
      <item>
       <widget class="QPushButton" name="pushButton_2">
        <property name="text">
-        <string>Confirm</string>
+        <string>确定</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_3">
        <property name="text">
-        <string>CLose</string>
+        <string>关闭</string>
        </property>
       </widget>
      </item>

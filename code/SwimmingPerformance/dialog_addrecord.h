@@ -15,9 +15,6 @@ public:
     explicit Dialog_addRecord(QWidget *parent = 0);
     ~Dialog_addRecord();
 
-private slots:
-    void on_pushButton_3_clicked();
-
 private:
     Ui::Dialog_addRecord *ui;
 };

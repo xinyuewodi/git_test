@@ -41,6 +41,6 @@ FORMS += \
 RESOURCES += \
     resources.qrc
 
-DISTFILES +=
+TRANSLATIONS += swim_zh.ts
 
-TRANSLATIONS = swimmingperformance_en.ts swimmingperformance_cn.ts
+RC_ICONS = swim.ico

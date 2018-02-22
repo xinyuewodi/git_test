@@ -15,7 +15,3 @@ Dialog_addRecord::~Dialog_addRecord()
     delete ui;
 }
 
-void Dialog_addRecord::on_pushButton_3_clicked()
-{
-    this->close();
-}
