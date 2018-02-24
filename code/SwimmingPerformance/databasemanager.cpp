@@ -1,6 +1,7 @@
 #include "databasemanager.h"
 
 #include <QMutexLocker>
+#include <QMessageBox>
 
 DataBaseManager * DataBaseManager::_pInstance = nullptr;
 
@@ -23,25 +24,41 @@ DataBaseManager *DataBaseManager::getInstance()
 
 bool DataBaseManager::createConnection()
 {
+    _connection = QSqlDatabase::addDatabase("QSQLITE","SwimRecord");
+    _connection.setDatabaseName("SwimRecord.db");
+    if(false == _connection.open())
+    {
+        QMessageBox::critical(nullptr, "Cannot open database",
+                              _connection.lastError().text());
+        return false;
+    }
+
     return true;
 }
 
 bool DataBaseManager::closeConnection()
 {
+    if(_connection.isOpen())
+    {
+        _connection.close();
+    }
     return true;
 }
 
 bool DataBaseManager::transaction()
 {
-    return true;
+    bool flag = _connection.transaction();
+    return flag;
 }
 
 bool DataBaseManager::commit()
 {
-    return true;
+    bool flag = _connection.commit();
+    return flag;
 }
 
 bool DataBaseManager::rollback()
 {
-    return true;
+    bool flag = _connection.rollback();
+    return flag;
 }

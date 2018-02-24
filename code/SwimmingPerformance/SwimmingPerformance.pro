@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -32,7 +32,8 @@ SOURCES += \
 HEADERS += \
         mainwindow.h \
     dialog_addrecord.h \
-    databasemanager.h
+    databasemanager.h \
+    globals.h
 
 FORMS += \
         mainwindow.ui \

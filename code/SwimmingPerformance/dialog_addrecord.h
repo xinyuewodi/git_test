@@ -2,6 +2,10 @@
 #define DIALOG_ADDRECORD_H
 
 #include <QDialog>
+#include "globals.h"
+
+#define DEBUG_DIALOG_ADDRECORD
+#undef DEBUG_DIALOG_ADDRECORD
 
 namespace Ui {
 class Dialog_addRecord;

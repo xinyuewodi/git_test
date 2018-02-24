@@ -6,6 +6,7 @@
 #include <QDebug>
 
 #include "dialog_addrecord.h"
+#include "databasemanager.h"
 
 namespace Ui {
 class MainWindow;
@@ -29,6 +30,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Dialog_addRecord *pDialog_add;
+    DataBaseManager *_pDataBase;
 };
 
 #endif // MAINWINDOW_H

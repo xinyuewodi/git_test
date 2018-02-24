@@ -54,6 +54,55 @@ void Dialog_addRecord::on_pushButton_close_clicked()
 
 void Dialog_addRecord::on_pushButton_confirm_clicked()
 {
+    //1.提取输入数据
+    SwimRecord record;
+    record.totalLap = ui->spinBox_totalLaps->text().toInt();        //总圈数
+    record.totalTime = ui->timeEdit_totalTime->time();              //总时间
+    record.avgTime = ui->timeEdit_avgTime->time();                  //每圈平均时间
+    record.FastestLapNum = ui->spinBox_fastestLap->text();          //最快圈号
+    record.FLapTimeCost = ui->timeEdit_FTimeCost->time();           //最快圈时间
+    record.SLowestLapNum = ui->spinBox_slowestLap->text();          //最慢圈号
+    record.SLapTimeCost = ui->timeEdit_STimeCost->time();           //最慢圈时间
+
+#ifdef DEBUG_DIALOG_ADDRECORD
+    qDebug() << "totalLap:" << record.totalLap;
+    qDebug() << "totalTime:" << record.totalTime;
+    qDebug() << "avgTime:" << record.avgTime;
+    qDebug() << "FastestLapNum:" << record.FastestLapNum;
+    qDebug() << "FLapTimeCost:" << record.FLapTimeCost;
+    qDebug() << "SLowestLapNum:" << record.SLowestLapNum;
+    qDebug() << "SLapTimeCost:" << record.SLapTimeCost;
+#endif
+
+    //2.提取详细数据
+    DetailSwimRecord tmpRecord;                                     //单个记录
+    QList<DetailSwimRecord> records;                                //最终提取到的数据
+    QWidget *widget;                                                //单元格widget
+    QTime time;                                                     //单元格widget的值
+    QString lapNum;                                                 //圈号
+
+    int rowCount = ui->tableWidget_dataInput->rowCount();
+    for(int i=0; i < rowCount; ++i)
+    {
+        //获取圈号
+        lapNum = ui->tableWidget_dataInput->item(i, 0)->data(Qt::DisplayRole).toString();
+        tmpRecord.lapNum = lapNum;
+
+        //获取单圈耗时
+        widget = ui->tableWidget_dataInput->cellWidget(i, 1);
+        time = dynamic_cast<QTimeEdit *>(widget)->time();
+        tmpRecord.record = time;
+
+#ifdef DEBUG_DIALOG_ADDRECORD
+        qDebug() << "lapNum:" << tmpRecord.lapNum << " " << "timeCost:" << tmpRecord.record;
+#endif
+
+        records << tmpRecord;                                       //最终提取到的数据
+    }
+
+    //3.写入数据库
+
+    //4.弹框提示完成
     QMessageBox msg;
     msg.setWindowTitle("输入");
     msg.setText("输入完成");
