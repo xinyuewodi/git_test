@@ -28,7 +28,7 @@
     <item>
      <widget class="QGroupBox" name="groupBox_2">
       <property name="title">
-       <string/>
+       <string>数据</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>

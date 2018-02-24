@@ -15,6 +15,13 @@ public:
     explicit Dialog_addRecord(QWidget *parent = 0);
     ~Dialog_addRecord();
 
+private slots:
+    void on_spinBox_totalLaps_valueChanged(int arg1);
+
+    void on_pushButton_close_clicked();
+
+    void on_pushButton_confirm_clicked();
+
 private:
     Ui::Dialog_addRecord *ui;
 };

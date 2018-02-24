@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>722</width>
+    <width>559</width>
     <height>585</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Add records</string>
+   <string>记录游泳数据</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
@@ -26,20 +26,52 @@
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <layout class="QGridLayout" name="gridLayout">
-        <item row="3" column="3">
-         <widget class="QTimeEdit" name="timeEdit_3">
+        <item row="3" column="1">
+         <widget class="QSpinBox" name="spinBox_fastestLap">
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>总时间*</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QTimeEdit" name="timeEdit_totalTime">
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::NoButtons</enum>
           </property>
          </widget>
         </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="lineEdit">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
+        <item row="1" column="2">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>平均时间</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QTimeEdit" name="timeEdit_avgTime">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QTimeEdit" name="timeEdit_FTimeCost">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>耗时</string>
           </property>
          </widget>
         </item>
@@ -57,63 +89,36 @@
           </property>
          </widget>
         </item>
-        <item row="3" column="1">
-         <widget class="QLineEdit" name="lineEdit_4"/>
-        </item>
-        <item row="3" column="2">
-         <widget class="QLabel" name="label_6">
-          <property name="text">
-           <string>耗时</string>
+        <item row="0" column="1">
+         <widget class="QSpinBox" name="spinBox_totalLaps">
+          <property name="maximum">
+           <number>999</number>
           </property>
          </widget>
         </item>
-        <item row="3" column="4">
+        <item row="4" column="0">
          <widget class="QLabel" name="label_5">
           <property name="text">
            <string>最慢圈</string>
           </property>
          </widget>
         </item>
-        <item row="3" column="5">
-         <widget class="QLineEdit" name="lineEdit_5"/>
+        <item row="4" column="1">
+         <widget class="QSpinBox" name="spinBox_slowestLap">
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
         </item>
-        <item row="3" column="6">
+        <item row="4" column="2">
          <widget class="QLabel" name="label_7">
           <property name="text">
            <string>耗时</string>
           </property>
          </widget>
         </item>
-        <item row="3" column="7">
-         <widget class="QTimeEdit" name="timeEdit_4">
-          <property name="buttonSymbols">
-           <enum>QAbstractSpinBox::NoButtons</enum>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_2">
-          <property name="text">
-           <string>总时间*</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QTimeEdit" name="timeEdit">
-          <property name="buttonSymbols">
-           <enum>QAbstractSpinBox::NoButtons</enum>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="2">
-         <widget class="QLabel" name="label_3">
-          <property name="text">
-           <string>平均时间</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="3">
-         <widget class="QTimeEdit" name="timeEdit_2">
+        <item row="4" column="3">
+         <widget class="QTimeEdit" name="timeEdit_STimeCost">
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::NoButtons</enum>
           </property>
@@ -131,7 +136,7 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <widget class="QTableWidget" name="tableWidget">
+       <widget class="QTableWidget" name="tableWidget_dataInput">
         <property name="alternatingRowColors">
          <bool>true</bool>
         </property>
@@ -165,14 +170,14 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="pushButton_confirm">
        <property name="text">
         <string>确定</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="pushButton_close">
        <property name="text">
         <string>关闭</string>
        </property>
@@ -195,6 +200,14 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>timeEdit_totalTime</tabstop>
+  <tabstop>timeEdit_avgTime</tabstop>
+  <tabstop>timeEdit_FTimeCost</tabstop>
+  <tabstop>tableWidget_dataInput</tabstop>
+  <tabstop>pushButton_confirm</tabstop>
+  <tabstop>pushButton_close</tabstop>
+ </tabstops>
  <resources>
   <include location="resources.qrc"/>
  </resources>
