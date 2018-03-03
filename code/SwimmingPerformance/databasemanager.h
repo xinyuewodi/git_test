@@ -16,6 +16,7 @@ public:
 
     bool createConnection();
     bool closeConnection();
+    QSqlDatabase getConnection();
 
     bool transaction();
     bool commit();

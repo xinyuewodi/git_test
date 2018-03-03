@@ -9,9 +9,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    //初始化数据库
-    _pDataBase = DataBaseManager::getInstance();
-    _pDataBase->createConnection();
+    initialDataBase();
+    initialValues();
 }
 
 MainWindow::~MainWindow()
@@ -21,7 +20,23 @@ MainWindow::~MainWindow()
     _pDataBase->closeConnection();
 }
 
-void MainWindow::initial()
+bool MainWindow::initialDataBase()
+{
+    //初始化数据库
+    _pDataBase = DataBaseManager::getInstance();
+    bool flag = _pDataBase->createConnection();
+    if(false == flag)
+        return false;
+
+    //创建表
+    flag = _swimRecordManager.creatTable();
+    if(false == flag)
+        return false;
+
+    return true;
+}
+
+void MainWindow::initialValues()
 {
     pDialog_add = nullptr;
 }

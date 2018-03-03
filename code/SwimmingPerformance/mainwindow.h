@@ -7,6 +7,7 @@
 
 #include "dialog_addrecord.h"
 #include "databasemanager.h"
+#include "swimrecordtablemanager.h"
 
 namespace Ui {
 class MainWindow;
@@ -21,7 +22,8 @@ public:
     ~MainWindow();
 
 public:
-    void initial();
+    bool initialDataBase();
+    void initialValues();
 
 private slots:
 
@@ -31,6 +33,7 @@ private:
     Ui::MainWindow *ui;
     Dialog_addRecord *pDialog_add;
     DataBaseManager *_pDataBase;
+    SwimRecordTableManager _swimRecordManager;
 };
 
 #endif // MAINWINDOW_H

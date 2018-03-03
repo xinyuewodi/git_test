@@ -27,13 +27,15 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     dialog_addrecord.cpp \
-    databasemanager.cpp
+    databasemanager.cpp \
+    swimrecordtablemanager.cpp
 
 HEADERS += \
         mainwindow.h \
     dialog_addrecord.h \
     databasemanager.h \
-    globals.h
+    globals.h \
+    swimrecordtablemanager.h
 
 FORMS += \
         mainwindow.ui \

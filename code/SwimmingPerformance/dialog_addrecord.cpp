@@ -64,6 +64,8 @@ void Dialog_addRecord::on_pushButton_confirm_clicked()
     record.SLowestLapNum = ui->spinBox_slowestLap->text();          //最慢圈号
     record.SLapTimeCost = ui->timeEdit_STimeCost->time();           //最慢圈时间
 
+    record.date = QDate::currentDate();                             //今天日期
+
 #ifdef DEBUG_DIALOG_ADDRECORD
     qDebug() << "totalLap:" << record.totalLap;
     qDebug() << "totalTime:" << record.totalTime;
@@ -72,6 +74,7 @@ void Dialog_addRecord::on_pushButton_confirm_clicked()
     qDebug() << "FLapTimeCost:" << record.FLapTimeCost;
     qDebug() << "SLowestLapNum:" << record.SLowestLapNum;
     qDebug() << "SLapTimeCost:" << record.SLapTimeCost;
+    qDebug() << "date:" << record.date;
 #endif
 
     //2.提取详细数据
@@ -110,3 +113,19 @@ void Dialog_addRecord::on_pushButton_confirm_clicked()
 
     this->close();
 }
+
+//void Dialog_addRecord::on_radioButton_simplfunc_clicked()
+//{
+//    ui->label_fastestLap->setVisible(false);
+//    ui->label_FTimeCost->setVisible(false);
+//    ui->label_slowestLap->setVisible(false);
+//    ui->label_STimeCost->setVisible(false);
+
+//    ui->spinBox_fastestLap->setVisible(false);
+//    ui->spinBox_slowestLap->setVisible(false);
+//    ui->timeEdit_FTimeCost->setVisible(false);
+//    ui->timeEdit_STimeCost->setVisible(false);
+
+//    ui->groupBox_data->setVisible(false);
+//    ui->tableWidget_dataInput->setVisible(false);
+//}

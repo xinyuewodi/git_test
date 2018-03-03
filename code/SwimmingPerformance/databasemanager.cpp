@@ -24,7 +24,7 @@ DataBaseManager *DataBaseManager::getInstance()
 
 bool DataBaseManager::createConnection()
 {
-    _connection = QSqlDatabase::addDatabase("QSQLITE","SwimRecord");
+    _connection = QSqlDatabase::addDatabase("QSQLITE");
     _connection.setDatabaseName("SwimRecord.db");
     if(false == _connection.open())
     {
@@ -43,6 +43,11 @@ bool DataBaseManager::closeConnection()
         _connection.close();
     }
     return true;
+}
+
+QSqlDatabase DataBaseManager::getConnection()
+{
+    return _connection;
 }
 
 bool DataBaseManager::transaction()
